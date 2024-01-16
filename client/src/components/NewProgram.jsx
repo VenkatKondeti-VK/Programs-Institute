@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 function NewProgram({setProgId, reload, setReload}) {
     const [formData, setFormData] = useState({
-        price: 0,
+        price: undefined,
         domain: "",
         assurance: false,
         name: "",
