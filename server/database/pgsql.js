@@ -10,8 +10,8 @@ const pool = new Pool({
 })
 
 pool.connect()
-.then(async () => {
-  await pool.query(`CREATE TABLE IF NOT EXISTS public.programs
+.then(() => {
+  pool.query(`CREATE TABLE IF NOT EXISTS public.programs
   (
       p_id integer NOT NULL DEFAULT nextval('programs_p_id_seq'::regclass),
       name character varying COLLATE pg_catalog."default" NOT NULL,
