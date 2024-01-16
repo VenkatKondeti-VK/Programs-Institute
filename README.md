@@ -13,8 +13,11 @@
 - Backend: Node.js and Express.js(Server), PostgreSQL(Database)
 
 # Screenshots
-- Admin Sign In ![SignIn](https://github.com/VenkatKondeti-VK/Programs-Institute/assets/112069288/1b1bffbe-e947-4120-b99a-3f5c920e6ee9)
-- Add a new Program ![newProg](https://github.com/VenkatKondeti-VK/Programs-Institute/assets/112069288/80778862-e9a1-49ae-91ab-0a7f760fd681)
-- View/Edit/Delete an existing Program ![prog](https://github.com/VenkatKondeti-VK/Programs-Institute/assets/112069288/cb9f3ec9-ca5d-464d-aa26-9fb4ecbda13a)
+- Admin Sign In ![SignIn](https://github.com/VenkatKondeti-VK/Programs-Institute/assets/112069288/30b714e2-4ce3-40b2-980b-0aaf08a25e5e)
+
+- Add a new Program ![newProg](https://github.com/VenkatKondeti-VK/Programs-Institute/assets/112069288/84f3ef33-e2b7-4993-b523-1255adae5228)
+
+- View/Edit/Delete an existing Program ![prog](https://github.com/VenkatKondeti-VK/Programs-Institute/assets/112069288/87138d61-d0e6-4bd7-a4ae-34ddd4095a11)
+
 
 
