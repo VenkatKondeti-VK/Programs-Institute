@@ -51,7 +51,7 @@ function SignIn() {
         <input 
           name='email' 
           type='email' 
-          placeholder='Email' 
+          placeholder='admin123@gmail.com' 
           className='border p-3 rounded-lg'
           onChange={handleChange}
           required
@@ -62,7 +62,7 @@ function SignIn() {
           <input 
             name='password' 
             type={!visible ? 'password' : 'text'} 
-            placeholder='Password' 
+            placeholder='Admin@1234' 
             className='w-full'
             onChange={handleChange}
             required
