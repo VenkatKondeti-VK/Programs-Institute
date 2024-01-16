@@ -38,8 +38,6 @@ pool.connect()
     } else {
       console.log('Table created successfully');
     }
-    // Don't forget to release the pool
-    pool.end();
   });
 })
 .catch((err) => console.log(err))
