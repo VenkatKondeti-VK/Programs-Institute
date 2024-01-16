@@ -81,6 +81,10 @@ function SignIn() {
           </div>
           
         </div>
+
+        <div className='flex justify-around'>
+          <h1 className='text-green-600'>Enter the above shown details to sign in !</h1>
+        </div>
         
         <button 
           className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-75'>
