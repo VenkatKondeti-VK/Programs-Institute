@@ -9,31 +9,38 @@ const pool = new Pool({
   database: process.env.PG_DB,
 })
 
+const createTableQuery = `
+  CREATE TABLE IF NOT EXISTS public.programs (
+    p_id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price BIGINT NOT NULL,
+    domain VARCHAR(255) NOT NULL,
+    prog_type VARCHAR(255) NOT NULL,
+    reg_type VARCHAR(255) NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    assurance BOOLEAN,
+    img_url VARCHAR(255) NOT NULL,
+    uni_name VARCHAR(255) NOT NULL,
+    faculty_profile VARCHAR(255) NOT NULL,
+    duration VARCHAR(255) NOT NULL,
+    deg_type VARCHAR(255) NOT NULL,
+    criteria VARCHAR(255),
+    last_modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  );
+`;
+
 pool.connect()
-.then(() => {
-  pool.query(`CREATE TABLE IF NOT EXISTS public.programs
-  (
-      p_id integer NOT NULL DEFAULT nextval('programs_p_id_seq'::regclass),
-      name character varying COLLATE pg_catalog."default" NOT NULL,
-      price bigint NOT NULL,
-      domain character varying COLLATE pg_catalog."default" NOT NULL,
-      prog_type character varying COLLATE pg_catalog."default" NOT NULL,
-      reg_type character varying COLLATE pg_catalog."default" NOT NULL,
-      description character varying COLLATE pg_catalog."default" NOT NULL,
-      assurance boolean,
-      img_url character varying COLLATE pg_catalog."default" NOT NULL,
-      uni_name character varying COLLATE pg_catalog."default" NOT NULL,
-      faculty_profile character varying COLLATE pg_catalog."default" NOT NULL,
-      duration character varying COLLATE pg_catalog."default" NOT NULL,
-      deg_type character varying COLLATE pg_catalog."default" NOT NULL,
-      criteria character varying COLLATE pg_catalog."default",
-      last_modified timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
-      CONSTRAINT programs_pkey PRIMARY KEY (p_id)
-  )`)
-})
 .then(() => console.log("Connected to PostgreSQL Database"))
 .then(() => {
-  console.log("created table programs")
+  pool.query(createTableQuery, (error, result) => {
+    if (error) {
+      console.error('Error creating table:', error);
+    } else {
+      console.log('Table created successfully');
+    }
+    // Don't forget to release the pool
+    pool.end();
+  });
 })
 .catch((err) => console.log(err))
 
