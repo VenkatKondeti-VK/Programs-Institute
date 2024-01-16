@@ -155,13 +155,13 @@ function NewProgram({setProgId, reload, setReload}) {
                                 </div>
                                 <div className='flex gap-4'>
                                     <div className='flex gap-2'>
-                                        <input type="radio" name="prog_ft" checked={formData.prog_type === 'FT'} onChange={handleChange} />
-                                        <label htmlFor="huey">FT</label>
+                                        <input type="radio" name="FT" checked={formData.prog_type === 'FT'} onChange={handleChange} />
+                                        <label htmlFor="FT">FT</label>
                                     </div>
 
                                     <div className='flex gap-2'>
-                                        <input type="radio" name="prog_pt" checked={formData.prog_type === 'PT'} onChange={handleChange}/>
-                                        <label htmlFor="dewey">PT</label>
+                                        <input type="radio" name="PT" checked={formData.prog_type === 'PT'} onChange={handleChange}/>
+                                        <label htmlFor="PT">PT</label>
                                     </div>
                                 </div>
                             </div>
@@ -173,13 +173,13 @@ function NewProgram({setProgId, reload, setReload}) {
                                 </div>
                                 <div className='flex gap-4'>
                                     <div className='flex gap-2'>
-                                        <input type="radio" name="reg_yes" checked={formData.reg_type === 'yes'} onChange={handleChange} />
-                                        <label htmlFor="huey">Yes</label>
+                                        <input type="radio" name="yes" checked={formData.reg_type === 'yes'} onChange={handleChange} />
+                                        <label htmlFor="yes">Yes</label>
                                     </div>
 
                                     <div className='flex gap-2'>
-                                        <input type="radio" name="reg_no" checked={formData.reg_type === 'no'} onChange={handleChange} />
-                                        <label htmlFor="dewey">No</label>
+                                        <input type="radio" name="no" checked={formData.reg_type === 'no'} onChange={handleChange} />
+                                        <label htmlFor="no">No</label>
                                     </div>
                                 </div>
                             </div>
