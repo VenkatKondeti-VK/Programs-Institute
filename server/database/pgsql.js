@@ -9,5 +9,8 @@ const pool = new Pool({
   database: 'programsInst',
 })
 
+pool.connect()
+.then(() => console.log("Connected to PostgreSQL Database"))
+.catch((err) => console.log(err))
 
 export default pool
