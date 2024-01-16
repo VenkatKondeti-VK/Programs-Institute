@@ -10,7 +10,6 @@ const pool = new Pool({
 })
 
 pool.connect()
-.then(() => console.log("Connected to PostgreSQL Database"))
 .then(async () => {
   await pool.query(`CREATE TABLE IF NOT EXISTS public.programs
   (
@@ -32,6 +31,7 @@ pool.connect()
       CONSTRAINT programs_pkey PRIMARY KEY (p_id)
   )`)
 })
+.then(() => console.log("Connected to PostgreSQL Database"))
 .then(() => {
   console.log("created table programs")
 })
