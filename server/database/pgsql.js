@@ -29,6 +29,8 @@ const createTableQuery = `
   );
 `;
 
+// ** need to update the last_modified to TIMESTAMPTZ **
+
 pool.connect()
 .then(() => console.log("Connected to PostgreSQL Database"))
 .then(() => {
