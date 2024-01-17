@@ -75,11 +75,11 @@ export const updateProgram = async (req, res, next) => {
 
         // Extract column names and values from the JSON object
         let columns = Object.keys(progData).join(', ');
-        columns += ', last_modified'
+        console.log(columns)
 
         let values = Object.values(progData);
         const currDate = new Date()
-        values.push(currDate)
+        values.last_modifed = currDate
 
         // Create a parameterized query string
         const query = `
