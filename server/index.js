@@ -13,7 +13,8 @@ const __dirname = path.resolve()
 const app = express()
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors())
+
+// app.use(cors())    * No need to use cors as both frontend and backend are hosted on same server *
 
 app.use('/api/program', programRouter)
 app.use('/api/auth', authRouter)
